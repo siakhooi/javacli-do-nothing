@@ -14,7 +14,7 @@ public class Parameters {
     boolean help;
 
     @Parameter
-    List<String> parameters = new ArrayList<>();
+    List<String> mainParameters = new ArrayList<>();
 
     private JCommander jc;
 

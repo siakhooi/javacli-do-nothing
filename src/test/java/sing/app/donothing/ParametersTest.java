@@ -45,7 +45,7 @@ class ParametersTest {
     p.process(new String[]{"-h"});
     assertEquals(true, p.help);
     assertEquals(false, p.version);
-    assertEquals(0, p.parameters.size());
+    assertEquals(0, p.mainParameters.size());
   }
   @Test
   void testProcess2() {
@@ -53,7 +53,7 @@ class ParametersTest {
     p.process(new String[]{"-v"});
     assertEquals(false, p.help);
     assertEquals(true, p.version);
-    assertEquals(0, p.parameters.size());
+    assertEquals(0, p.mainParameters.size());
   }
   @Test
   void testProcess3() {
@@ -61,6 +61,6 @@ class ParametersTest {
     p.process(new String[]{"abc", "cde"});
     assertEquals(false, p.help);
     assertEquals(false, p.version);
-    assertEquals(2, p.parameters.size());
+    assertEquals(2, p.mainParameters.size());
   }
 }

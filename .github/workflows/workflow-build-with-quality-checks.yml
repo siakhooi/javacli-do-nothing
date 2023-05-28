@@ -12,3 +12,8 @@ jobs:
     uses: ./.github/workflows/quality-sonarcloud.yml
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  codeclimate:
+    needs: build-maven-deb
+    uses: ./.github/workflows/quality-codeclimate.yml
+    secrets:
+      CODE_CLIMATE_REPORT_TOKEN: ${{ secrets.CODE_CLIMATE_REPORT_TOKEN }}
