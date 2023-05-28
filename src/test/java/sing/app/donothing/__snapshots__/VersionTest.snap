@@ -1,0 +1,24 @@
+sing.app.donothing.VersionTest.testPrintApplicationVersion=[
+Do-Nothing 1.0.0
+
+]
+
+
+sing.app.donothing.VersionTest.testPrintHelp=[
+Do-Nothing 1.0.0
+Usage: Do-Nothing [options]
+  Options:
+    --version, -v
+      Display version
+      Default: false
+    --help, -h
+      Display help
+.
+.
+]
+
+
+sing.app.donothing.VersionTest.testPrintVersion=[
+1.0.0
+
+]

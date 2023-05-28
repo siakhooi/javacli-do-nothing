@@ -1,0 +1,11 @@
+sing.app.donothing.ParametersTest.testPrintUsage=[
+Usage: Do-Nothing [options]
+  Options:
+    --version, -v
+      Display version
+      Default: false
+    --help, -h
+      Display help
+.
+.
+]

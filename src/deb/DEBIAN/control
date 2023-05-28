@@ -1,0 +1,7 @@
+Package: siakhooi-java-do-nothing
+Version: 0.0.1
+Maintainer: Siak Hooi <siakhooi@gmail.com>
+Depends: default-jre-headless|openjdk-17-jre-headless|openjdk-18-jre-headless|openjdk-19-jre-headless
+Architecture: amd64
+Homepage: <https://github.com/siakhooi/javacli-do-nothing>
+Description: Java program that do nothing.
