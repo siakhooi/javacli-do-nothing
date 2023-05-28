@@ -7,18 +7,23 @@ on:
 jobs:
   build-maven-deb:
     uses: ./.github/workflows/build-maven-deb.yml
+  sonarcloud:
+    needs: build-maven-deb
+    uses: ./.github/workflows/quality-sonarcloud.yml
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   release-assets:
-    needs: [build-maven-deb]
+    needs: [sonarcloud]
     uses: ./.github/workflows/deploy-github-release-assets.yml
     secrets:
       TOKEN_TO_UPLOAD_ASSETS: ${{ secrets.TOKEN_TO_UPLOAD_ASSETS }}
   jfrog:
-    needs: [build-maven-deb]
+    needs: [sonarcloud]
     uses: ./.github/workflows/publish-to-jfrog.yml
     secrets:
       JFROG_TOKEN: ${{ secrets.JFROG_TOKEN }}
   siakhooi-apt:
-    needs: [build-maven-deb]
+    needs: [sonarcloud]
     uses: ./.github/workflows/publish-to-siakhooi-apt.yml
     secrets:
       PUBLIC_TO_APT_GITHUB_TOKEN: ${{ secrets.PUBLIC_TO_APT_GITHUB_TOKEN }}
