@@ -8,3 +8,7 @@ build:
 	mvn clean verify
 	scripts/shellcheck.sh
 	scripts/build-deb.sh
+
+test-man:
+test-man:
+	pandoc src/deb/md/java-do-nothing.1.md -s -t man | man -l -

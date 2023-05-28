@@ -14,7 +14,7 @@ jobs:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
       - run: mvn verify
-      - run: sudo apt install shellcheck
+      - run: sudo apt install shellcheck pandoc
       - run: ./scripts/shellcheck.sh
       - run: ./scripts/build-deb.sh
       - uses: actions/upload-artifact@v3
