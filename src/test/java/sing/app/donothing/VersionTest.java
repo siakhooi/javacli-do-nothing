@@ -12,7 +12,7 @@ import au.com.origin.snapshots.Expect;
 import au.com.origin.snapshots.junit5.SnapshotExtension;
 
 @ExtendWith({SnapshotExtension.class})
-public class VersionTest {
+class VersionTest {
   PrintStream stdout;
   ByteArrayOutputStream baos;
   private Expect expect;

@@ -14,7 +14,7 @@ import au.com.origin.snapshots.Expect;
 import au.com.origin.snapshots.junit5.SnapshotExtension;
 
 @ExtendWith({SnapshotExtension.class})
-public class DoNothingTest {
+class DoNothingTest {
     PrintStream stdout;
     ByteArrayOutputStream baos;
     private Expect expect;
@@ -33,27 +33,27 @@ public class DoNothingTest {
     }
 
     @Test
-    public void callMainWithNoArguments() {
+    void callMainWithNoArguments() {
         DoNothing.main(new String[] {});
         assertTrue(true);
     }
 
     @Test
-    public void callMainWithArguments() {
+    void callMainWithArguments() {
         DoNothing.main(new String[] {"ABC", "CDE"});
         assertTrue(true);
     }
 
     @ParameterizedTest
     @ValueSource(strings = {"-h", "--help"})
-    public void callMainWithHelp(String argument1) {
+    void callMainWithHelp(String argument1) {
         DoNothing.main(new String[] {argument1});
         expect.toMatchSnapshot(baos.toString());
     }
 
     @ParameterizedTest
     @ValueSource(strings = {"-v", "--version"})
-    public void callMainWithVersion(String argument1) {
+    void callMainWithVersion(String argument1) {
         DoNothing.main(new String[] {argument1});
         expect.toMatchSnapshot(baos.toString());
     }
