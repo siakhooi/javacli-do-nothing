@@ -1,5 +1,6 @@
 package sing.app.donothing;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -32,33 +33,33 @@ class VersionTest {
 
   @Test
   void testGetAPPLICATION_NAME() {
-    assertEquals(Version.getAPPLICATION_NAME(), "Do-Nothing");
+    assertEquals("Do-Nothing", Version.getAPPLICATION_NAME());
   }
 
   @Test
   void testGetAPPLICATION_VERSION() {
-    assertEquals(Version.getAPPLICATION_VERSION(), "1.0.0");
+    assertEquals("1.0.0", Version.getAPPLICATION_VERSION());
   }
 
   @Test
   void testPrintApplicationVersion() {
     Version.printApplicationVersion();
-    expect.toMatchSnapshot(baos.toString());
+    assertDoesNotThrow(() -> expect.toMatchSnapshot(baos.toString()));
   }
 
   @Test
   void testPrintHelp() {
-    Parameters parameters=new Parameters();
-    parameters.process(new String[]{"-h"});
+    Parameters parameters = new Parameters();
+    parameters.process(new String[] {"-h"});
     Version.printHelp(parameters);
-    expect.toMatchSnapshot(baos.toString());
+    assertDoesNotThrow(() -> expect.toMatchSnapshot(baos.toString()));
 
   }
 
   @Test
   void testPrintVersion() {
     Version.printVersion();
-    expect.toMatchSnapshot(baos.toString());
+    assertDoesNotThrow(() -> expect.toMatchSnapshot(baos.toString()));
   }
 
 }

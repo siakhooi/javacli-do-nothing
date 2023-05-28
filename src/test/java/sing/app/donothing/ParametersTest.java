@@ -1,5 +1,6 @@
 package sing.app.donothing;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -30,35 +31,37 @@ class ParametersTest {
     System.setOut(stdout);
     baos.close();
   }
-  
+
   @Test
   void testPrintUsage() {
-    Parameters p=new Parameters();
-    p.process(new String[]{"-h"});
+    Parameters p = new Parameters();
+    p.process(new String[] {"-h"});
     p.printUsage();
-    expect.toMatchSnapshot(baos.toString());
+    assertDoesNotThrow(() -> expect.toMatchSnapshot(baos.toString()));
   }
 
   @Test
   void testProcess1() {
-    Parameters p=new Parameters();
-    p.process(new String[]{"-h"});
+    Parameters p = new Parameters();
+    p.process(new String[] {"-h"});
     assertEquals(true, p.help);
     assertEquals(false, p.version);
     assertEquals(0, p.mainParameters.size());
   }
+
   @Test
   void testProcess2() {
-    Parameters p=new Parameters();
-    p.process(new String[]{"-v"});
+    Parameters p = new Parameters();
+    p.process(new String[] {"-v"});
     assertEquals(false, p.help);
     assertEquals(true, p.version);
     assertEquals(0, p.mainParameters.size());
   }
+
   @Test
   void testProcess3() {
-    Parameters p=new Parameters();
-    p.process(new String[]{"abc", "cde"});
+    Parameters p = new Parameters();
+    p.process(new String[] {"abc", "cde"});
     assertEquals(false, p.help);
     assertEquals(false, p.version);
     assertEquals(2, p.mainParameters.size());

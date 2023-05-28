@@ -1,5 +1,6 @@
 package sing.app.donothing;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -48,13 +49,13 @@ class DoNothingTest {
     @ValueSource(strings = {"-h", "--help"})
     void callMainWithHelp(String argument1) {
         DoNothing.main(new String[] {argument1});
-        expect.toMatchSnapshot(baos.toString());
+        assertDoesNotThrow(() -> expect.toMatchSnapshot(baos.toString()));
     }
 
     @ParameterizedTest
     @ValueSource(strings = {"-v", "--version"})
     void callMainWithVersion(String argument1) {
         DoNothing.main(new String[] {argument1});
-        expect.toMatchSnapshot(baos.toString());
+        assertDoesNotThrow(() -> expect.toMatchSnapshot(baos.toString()));
     }
 }
