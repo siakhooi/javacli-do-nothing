@@ -7,8 +7,8 @@
 
   <groupId>sing.app</groupId>
   <artifactId>do-nothing</artifactId>
-  <version>0.0.1</version>
-  <name>do-nothing</name>
+  <version>0.0.2</version>
+  <name>java-do-nothing</name>
   <url>https://github.com/siakhooi/javacli-do-nothing</url>
 
   <properties>

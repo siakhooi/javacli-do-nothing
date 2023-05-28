@@ -33,12 +33,12 @@ class VersionTest {
 
   @Test
   void testGetAPPLICATION_NAME() {
-    assertEquals("Do-Nothing", Version.getAPPLICATION_NAME());
+    assertEquals("java-do-nothing", Version.getAPPLICATION_NAME());
   }
 
   @Test
   void testGetAPPLICATION_VERSION() {
-    assertEquals("1.0.0", Version.getAPPLICATION_VERSION());
+    assertEquals("0.0.2", Version.getAPPLICATION_VERSION());
   }
 
   @Test

@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Version {
     @Getter
-    private static final String APPLICATION_NAME = "Do-Nothing";
+    private static final String APPLICATION_NAME = "java-do-nothing";
     @Getter
-    private static final String APPLICATION_VERSION = "1.0.0";
+    private static final String APPLICATION_VERSION = "0.0.2";
 
     public static void printApplicationVersion() {
         Console.printf("%s %s%n", APPLICATION_NAME, APPLICATION_VERSION);

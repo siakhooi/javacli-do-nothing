@@ -1,5 +1,5 @@
 sing.app.donothing.ParametersTest.testPrintUsage=[
-Usage: Do-Nothing [options]
+Usage: java-do-nothing [options]
   Options:
     --version, -v
       Display version
