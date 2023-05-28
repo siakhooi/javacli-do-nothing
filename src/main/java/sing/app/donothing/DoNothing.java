@@ -13,7 +13,6 @@ public class DoNothing {
         parameters.process(args);
         if (parameters.help) {
             Version.printHelp(parameters);
-            return;
         }else if(parameters.version){
             Version.printVersion();
         }
