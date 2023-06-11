@@ -25,3 +25,7 @@ java-do-nothing -h
 
 java-do-nothing --help
 ```
+
+## Badge
+
+![visitors](https://hit-tztugwlsja-uc.a.run.app/?outputtype=badge&counter=ghmd-java-do-nothing)
