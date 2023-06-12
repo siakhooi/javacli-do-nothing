@@ -1,10 +1,9 @@
 sing.app.donothing.DoNothingTest.callMainWithHelp=[
-java-do-nothing 0.0.2
+java-do-nothing 0.0.3
 Usage: java-do-nothing [options]
   Options:
     --version, -v
       Display version
-      Default: false
     --help, -h
       Display help
 .
@@ -13,6 +12,6 @@ Usage: java-do-nothing [options]
 
 
 sing.app.donothing.DoNothingTest.callMainWithVersion=[
-0.0.2
+0.0.3
 
 ]

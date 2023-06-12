@@ -3,7 +3,6 @@ Usage: java-do-nothing [options]
   Options:
     --version, -v
       Display version
-      Default: false
     --help, -h
       Display help
 .

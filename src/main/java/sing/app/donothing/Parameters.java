@@ -8,8 +8,8 @@ import com.beust.jcommander.ParameterException;
 
 public class Parameters {
 
-    @Parameter(order = 1, names = {"--version", "-v"}, description = "Display version")
-    boolean version = false;
+    @Parameter(order = 1, names = {"--version", "-v"}, description = "Display version", help = true)
+    boolean version;
     @Parameter(order = 2, names = {"--help", "-h"}, description = "Display help", help = true)
     boolean help;
 

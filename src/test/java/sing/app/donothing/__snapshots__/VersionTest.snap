@@ -1,16 +1,15 @@
 sing.app.donothing.VersionTest.testPrintApplicationVersion=[
-java-do-nothing 0.0.2
+java-do-nothing 0.0.3
 
 ]
 
 
 sing.app.donothing.VersionTest.testPrintHelp=[
-java-do-nothing 0.0.2
+java-do-nothing 0.0.3
 Usage: java-do-nothing [options]
   Options:
     --version, -v
       Display version
-      Default: false
     --help, -h
       Display help
 .
@@ -19,6 +18,6 @@ Usage: java-do-nothing [options]
 
 
 sing.app.donothing.VersionTest.testPrintVersion=[
-0.0.2
+0.0.3
 
 ]
